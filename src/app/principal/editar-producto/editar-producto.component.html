@@ -1,0 +1,68 @@
+<h2 class="text-center py-4">Producto N° {{ currentProduct.id }}</h2>
+<section class="container pt-2">
+  <form class="form-group" (ngSubmit)="updateProduct()">
+    <section class="form-group">
+      <label for="codigo">Codigo</label>
+      <input
+        type="number"
+        class="form-control"
+        id="codigo"
+        name="codigo"
+        [(ngModel)]="currentProduct.codigo"
+      />
+    </section>
+    <section class="form-group">
+      <label for="descripcion">Descripcion</label>
+      <input
+        type="text"
+        class="form-control"
+        id="descripcion"
+        name="descripcion"
+        [(ngModel)]="currentProduct.descripcion"
+      />
+    </section>
+    <section class="form-group">
+      <label for="precioCompra">Precio Compra</label>
+      <input
+        type="number"
+        class="form-control"
+        id="precioCompra"
+        name="precioCompra"
+        [(ngModel)]="currentProduct.precioCompra"
+      />
+    </section>
+    <section class="form-group">
+      <label for="precioVenta">Precio Venta</label>
+      <input
+        type="number"
+        class="form-control"
+        id="precioVenta"
+        name="precioVenta"
+        [(ngModel)]="currentProduct.precioVenta"
+      />
+    </section>
+    <section class="form-group">
+      <label for="ganancia">Ganancia</label>
+      <input
+        type="number"
+        class="form-control"
+        id="ganancia"
+        name="ganancia"
+        [(ngModel)]="currentProduct.ganancia"
+      />
+    </section>
+    <section class="form-group">
+      <label for="existencia">Existencia</label>
+      <input
+        type="number"
+        class="form-control"
+        id="existencia"
+        name="existencia"
+        [(ngModel)]="currentProduct.existencia"
+      />
+    </section>
+    <button class="btn btn-primary" (click)="updateProduct()">
+      Actualizar
+    </button>
+  </form>
+</section>
